@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title Express App
+    link(rel="icon" href="/favicon.png")
+    style.
+      body {
+        font-family: sans-serif;
+        transition: background 0.3s, color 0.3s;
+      }
+    if theme === 'dark'
+      style.
+        body {
+          background-color: #111;
+          color: #fff;
+        }
+    else
+      style.
+        body {
+          background-color: #fff;
+          color: #000;
+        }
+  body
+    h1 Welcome to Express
+    p Current theme: #{theme}
+    form(action="/set-theme", method="POST")
+      select(name="theme")
+        option(value="default" selected=theme === 'default') Default
+        option(value="dark" selected=theme === 'dark') Dark
+      button(type="submit") Set Theme
+    a(href="/protected") Protected Page
