@@ -4,7 +4,6 @@
 
 - **/public/favicon.ico**: Файл иконки для сайта.
 - **/views/index.pug**: Шаблон для PUG.
-- **/views/index.ejs**: Шаблон для EJS.
 - **app.js**: Серверный код с функциональностью для favicon, cookies и JWT.
 
 ## Функциональность
